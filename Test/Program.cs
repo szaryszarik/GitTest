@@ -10,24 +10,54 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            int[] numbers = new int[5];
-
-            string[,] names = new string[5, 4];
-
-            byte[][] scores = new byte[5][];
-
-            for (int i = 0; i < scores.Length; i++)
+            Shape[] shapes =
             {
-                scores[i] = new byte[i + 3];
-            }
+                new Square(5, "Square #1"),
+                new Circle(3, "Circle #1"),
+                new Rectangle(4,5,"Rectangle #1")
+            };
 
-            for (int i = 0; i < scores.Length; i++)
+            Console.WriteLine("Shapes Collection");
+            foreach (Shape s in shapes)
             {
-                Console.WriteLine("Length of row {0} is {1}", i, scores[i].Length);
+                Console.WriteLine(s);
             }
+            Console.ReadLine();
+        }
+    }
 
+    class Person
+    {
+        private string myName = "N/A";
+        private int myAge = 0;
 
-                Console.ReadLine();
+        public string Name
+        {
+            get
+            {
+                return myName;
+            }
+            set
+            {
+                myName = value;
+            }
+        }
+
+        public int Age
+        {
+            get
+            {
+                return myAge;
+            }
+            set
+            {
+                myAge = value;
+            }
+        }
+
+        public override string ToString()
+        {
+            return "Name = " + Name + ", Age = " + Age;
         }
     }
 }
