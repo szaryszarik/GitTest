@@ -8,7 +8,7 @@ namespace Test
 {
     class Program
     {
-        static void Main(string[] args)
+        /*static void Main(string[] args)
         {
             Shape[] shapes =
             {
@@ -22,8 +22,14 @@ namespace Test
             {
                 Console.WriteLine(s);
             }
+
+            One t = new One("Ziomeczek");
+
+            t.getName();
+
             Console.ReadLine();
-        }
+        }*/
+        
     }
 
     class Person
